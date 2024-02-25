@@ -1,4 +1,4 @@
-# To the Moon :rocket 
+# To the Moon 🚀🌙 
 
 This repository is for use by candidates joining Future Energy Associates to demonstarte their technical skills. It contains the start of a Django project for a web application for signing small businesses up to a new market place.
 
