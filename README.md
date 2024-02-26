@@ -22,7 +22,9 @@ In this app, please prioritise and start to create the following functionality, 
 - Introduce a front-end framework into the app to start improving the user experience
 - Store an data as necessary 
 
-API keys for both will be shared seperately. Suggest some further improvements for this feature and note how you would implement them.
+API keys for both services above will be shared seperately.
+
+Suggest some further improvements for these features and note how you would implement them.
 
 ## Notes
 
