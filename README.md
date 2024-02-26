@@ -15,12 +15,13 @@ To run the project, navigate to the `app` directory and run `python manage.py ru
 
 Future Energy Associates is building a new market platform for businesses to procure energy. This will involve correctly identifying and collecting data about the company that can be validated against their energy bill.  
 
-In this app, please prioritise and start to create the following functionality, creating accompanying tests (as appropriate) along the way:
+In this app, please prioritise and start to create some of the following functionality, creating accompanying tests (as appropriate) along the way:
 - Create an address lookup from postcode using `https://api.ideal-postcodes.co.uk` or other service of your choosing 
 - Based on address perform search to find associated business record from `https://api.company-information.service.gov.uk/advanced-search/companies`
 - Create option to indicate company registered address not the same as sign-up address.
 - Introduce a front-end framework into the app to start improving the user experience
-- Store any data as necessary 
+- Store any data as necessary
+- Integrate with the Tariffscanner API to provide the business with an idea of current market rates `https://api.tariffscan.futureenergy.associates/docs#/general/get_best_value_tariffs_general_get_best_value_tariffs_post` 
 
 API keys for both services above will be shared seperately.
 

@@ -9,7 +9,9 @@ class Company(models.Model):
     name = models.CharField(max_length=100)
     companies_house_number = models.IntegerField()
     description = models.TextField()
-    role = models.CharField(max_length=100)
+    role = models.CharField(
+        max_length=100
+    )  # Role of the company on the platform i.e. supplier, consumer, etc.
     supply_license = models.IntegerField(max_length=100)  # Ofgem supply license number
     postcode = models.CharField(max_length=10)
     address1 = models.CharField(max_length=100)
