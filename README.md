@@ -7,16 +7,16 @@ It contains the output of the django project creation command
 django-admin startproject mysite
 ```
 
-A few simple files have been added: `models.py`, `views.py` and `templates/measures.html`, and the `app` module has been registered in `settings.py` by adding its name to `INSTALLED_APPS`  
+A few simple files have been added: `models.py`, `views.py` and `templates/company.html`, and the `app` module has been registered in `settings.py` by adding its name to `INSTALLED_APPS`  
 
-To run the project, navigate to the `app` directory and run `python manage.py runserver`. The only endpoint currently active is `/measures` 
+To run the project, navigate to the `app` directory and run `python manage.py runserver`. The only endpoint currently active is `/company` 
 
 ## Task
 
 Future Energy Associates is building a new market platform for businesses to procure energy. This will involve correctly identifying and collecting data about the company that can be validated against their energy bill.  
 
 In this app, please start to create the following functionality, creating accompanying tests (as appropriate) along the way:
-- Create an address lookup from postcode using `https://api.ideal-postcodes.co.uk` 
+- Create an address lookup from postcode using `https://api.ideal-postcodes.co.uk` or other service of your choosing 
 - Based on address perform search to find associated business record from `https://api.company-information.service.gov.uk/advanced-search/companies`
 - Create option to indicate registered address not the same as 'the above'.
 - Store an data as necessary 

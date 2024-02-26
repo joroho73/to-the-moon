@@ -3,15 +3,14 @@ from django.db import models
 
 class Company(models.Model):
     """
-    Energy efficiency measures that could be applied to a property.
-    E.g. Loft insulation,
-    insulation material deployed in lofts to reduce energy lost through the roof, often 50mm-300mm thick,
-    £1000-£2000 for a 3 bed semi-detached house.
+    Company details for businesses signing up to the platform
     """
 
     name = models.CharField(max_length=100)
     companies_house_number = models.IntegerField()
     description = models.TextField()
+    role = models.CharField(max_length=100)
+    supply_license = models.IntegerField(max_length=100)  # Ofgem supply license number
     postcode = models.CharField(max_length=10)
     address1 = models.CharField(max_length=100)
     address2 = models.CharField(max_length=100)
