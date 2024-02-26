@@ -1,6 +1,6 @@
 # To the Moon 🚀🌙 
 
-This repository is for use by candidates joining Future Energy Associates to demonstarte their technical skills. It contains the start of a Django project for a web application for signing small businesses up to a new market place.
+This repository is for use by candidates joining Future Energy Associates to demonstrate their technical skills. It contains the start of a Django project for a web application for signing small businesses up to a new marketplace.
 
 It contains the output of the django project creation command
 ```
@@ -20,7 +20,7 @@ In this app, please prioritise and start to create the following functionality, 
 - Based on address perform search to find associated business record from `https://api.company-information.service.gov.uk/advanced-search/companies`
 - Create option to indicate registered address not the same as 'the above'.
 - Introduce a front-end framework into the app to start improving the user experience
-- Store an data as necessary 
+- Store any data as necessary 
 
 API keys for both will be shared seperately. Suggest some further improvements for this feature and note how you would implement them.
 
