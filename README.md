@@ -29,8 +29,8 @@ Suggest some further improvements for these features and note how you would impl
 
 ## Notes
 
-Please only spend a maximum of 2-3 hours on this task. We are not looking for a finished product, but rather a demonstration of your approach to solving problems and your ability to learn new technologies.
+Please only spend a maximum of 2.5 hours on this task. We are not looking for a finished product, but rather a demonstration of your approach to solving problems and your ability to learn new technologies.
 
-Feel free to include any other libraries, frameworks or scripts you feel are relevant to the task.  
-Please document your process and any decisions you make in the README.md file.  
+Feel free to include any other libraries, frameworks or scripts you feel are relevant to the task. Please document your process and any decisions you make in the README.md file.
+
 When you are finished, please send either a link to a public repository or a zip file of the project to your contact at Future Energy Associates.
