@@ -15,10 +15,11 @@ To run the project, navigate to the `app` directory and run `python manage.py ru
 
 Future Energy Associates is building a new market platform for businesses to procure energy. This will involve correctly identifying and collecting data about the company that can be validated against their energy bill.  
 
-In this app, please start to create the following functionality, creating accompanying tests (as appropriate) along the way:
+In this app, please prioritise and start to create the following functionality, creating accompanying tests (as appropriate) along the way:
 - Create an address lookup from postcode using `https://api.ideal-postcodes.co.uk` or other service of your choosing 
 - Based on address perform search to find associated business record from `https://api.company-information.service.gov.uk/advanced-search/companies`
 - Create option to indicate registered address not the same as 'the above'.
+- Introduce a front-end framework into the app to start improving the user experience
 - Store an data as necessary 
 
 API keys for both will be shared seperately. Suggest some further improvements for this feature and note how you would implement them.
