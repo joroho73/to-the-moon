@@ -18,9 +18,9 @@ Future Energy Associates is building a new market platform for businesses to pro
 In this app, please prioritise and start to create the following functionality, creating accompanying tests (as appropriate) along the way:
 - Create an address lookup from postcode using `https://api.ideal-postcodes.co.uk` or other service of your choosing 
 - Based on address perform search to find associated business record from `https://api.company-information.service.gov.uk/advanced-search/companies`
-- Create option to indicate registered address not the same as 'the above'.
+- Create option to indicate company registered address not the same as sign-up address.
 - Introduce a front-end framework into the app to start improving the user experience
-- Store an data as necessary 
+- Store an data as necessary
 
 API keys for both services above will be shared seperately.
 
