@@ -1,1 +1,14 @@
-{{ postcode }}
+<H1>Address Lookup</H1>
+
+<p>You searched for: <strong> {{postcode}} </strong> | <a href="{% url 'company' %}">Search again</a></p>
+<hr>
+<h3>Select your addresss</h3>
+<div>
+    <!-- Loop over each suggestion and render it as a button -->
+    {% for suggestion in suggestions %}
+        <form action="/" method="post">
+            {% csrf_token %}
+            <button type="submit" name="selected_address" value="{{ suggestion }}">{{ suggestion }}</button>
+        </form>
+    {% endfor %}
+</div>

@@ -11,7 +11,7 @@ class AddressLookupAPI:
     POSTCODES_KEY = "ak_lt21qifpaE8hyWiA9lsLS9t1vPmr4"
 
     def lookup(self, postcode):
-        api_url = f"{self.BASE_URL}?postcode={postcode}&api_key={self.POSTCODES_KEY}"
+        api_url = f"{self.BASE_URL}?query={postcode}&api_key={self.POSTCODES_KEY}"
 
         try:
             # Make the API call
@@ -21,8 +21,7 @@ class AddressLookupAPI:
             if response.status_code == 200:
                 # Parse the JSON response
                 data = response.json()
-                print(data)
-                return data
+                return data, postcode
             else:
                 # If the request was unsuccessful, return None
                 return None
