@@ -1,0 +1,5 @@
+1. 'manage.py' is in the mysite directory not the app directory as noted in readme.
+
+2. Required to run python manage.py migrate to apply unapplied migrations.
+
+3. 
