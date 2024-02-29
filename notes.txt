@@ -1,12 +1,27 @@
-1. 'manage.py' is in the mysite directory not the app directory as noted in readme.
+I have worked on the two API calls 'address lookup' and 'companies house' lookup. 
+I decided on this approach to initiate the user journey: enter postcode > view addresses 
+> select address > view companies associated with a query based on the address data.
 
-2. Required to run 'python manage.py migrate' to apply unapplied migrations.
+* Added AddressLookupView and CompanyLookupView classes to views.py in order to receive data and send to template
+* Created external_api.py as best practice 'separation of concerns' by keeping all external_api calls in one script 
+and away from the views and models.
+* Created two classes: AddressLookupAPI and CompanyLookupAPI to house the nuances between the different calls 
+(though this could now be refactored into a single class with two functions).
+* Created address_lookup and company_lookup templates to render the search results to the user and enable interaction.
+The user can now:
+    - enter postcode in /company/
+    - choose an address returned from the postcode lookup in /address_lookup/
+    - choose the company returned from the companies house call in /company_lookup/
 
-3. After running 'python manage.py runserver' received the following 404:
 
-    Using the URLconf defined in app.urls, Django tried these URL patterns, in this order:
-
-    admin/
-    company/ [name='company']
-    The empty path didn’t match any of these.
-
+Interesting points:
+* I’ve not used django too much (more experienced in Flask), it’s quite good to get up and running quickly.
+* Needed to run 'python manage.py migrate' to apply unapplied migrations before  runserver
+* There is an interesting Product level discussion needed about the user journey design.
+I built two companies house look ups because the address query isn't great (the companies house api forum says
+this is a work in progress), however the postcode loop was more accurate.
+* The companies house query is interesting. The query is based on ?q='query data'. There is now way to specify
+that the search is based on company name, or address, or postcode, or director name. Instead an internal algorithm
+attempts to do this, but it is very black box.
+* There is an advanced search but this specifies company_name_includes (or excludes), the other fields are associated 
+with company_type, disolved_date. 

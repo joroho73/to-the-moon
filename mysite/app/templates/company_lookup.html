@@ -1,3 +1,91 @@
-<h1>Company Details</h1>
-<p>Address: {{ address }}</p>
-<p>Address ID: {{ address_id }}</p>
+<h1>Search Details</h1>
+<ul>
+    <li>Address ID: {{ address_id }}</li>
+    <li>Address: {{ address }}</li>
+    <li>Postcode: {{ postcode }}</li>
+</ul>
+<hr>
+<p>The two sets of results recieved from two different api calls to companies house. The first uses the address from the postcode lookup, while the second uses just the postcode.</p>
+<p>It seems as if the second is more accurate as it returns results with a postcode match at the top of the dataset, and the result set is lower. </p>
+<p>The address lookup is far more generic, returns a much wider set of results. Looking on the Companies House API forum, the address search is very much a work in progress.</p>
+<p>In conclusion care will need to be taken when working out the best way (or ways) users identify the company.</p>
+<hr>
+<style>
+    .flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid blue;
+    padding: 10px;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+</style>
+
+<div class="flex-container">
+
+    <div class="flex-child">
+        <h2>Companies House lookup by Address</h2>
+
+        <div>
+            <!-- Calculate the number of pages -->
+            <p>Total records: {{ response_data_by_address.total_results }} |
+                Page {{ response_data_by_address.page_number }} of {% widthratio response_data_by_address.total_results response_data_by_address.items_per_page 1 %}</p>
+                    <!-- Loop over each item and display company information -->
+                    {% for item in response_data_by_address.items %}
+                    <div>
+                        <strong>Title:</strong> {{ item.title }} <br>
+                        <strong>Company Number:</strong> {{ item.company_number }} <br>
+                        <strong>Address:</strong> {{ item.address_snippet }} <br>
+                        <form action="/">
+                            <input type="submit" value="{{ item.title }} is my company">
+                        </form>
+                        <hr>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="flex-child">
+        <h2>Companies House lookup by Postcode</h2>
+        <div>
+            <!-- Calculate the number of pages -->
+            <p>Total records: {{ response_data.total_results }} |
+                Page {{ response_data.page_number }} of {% widthratio response_data.total_results response_data.items_per_page 1 %}</p>
+                    <!-- Loop over each item and display company information -->
+                    {% for item in response_data.items %}
+                    <div>
+                        <strong>Title:</strong> {{ item.title }} <br>
+                        <strong>Company Number:</strong> {{ item.company_number }} <br>
+                        <strong>Address:</strong> {{ item.address_snippet }} <br>
+                        <strong>Company Status:</strong> {{ item.company_status }} <br>
+                        <strong>Date of Creation:</strong> {{ item.date_of_creation }} <br>
+                        <strong>Date of Cessation:</strong> {{ item.date_of_cessation }} <br>
+                        <strong>Kind:</strong> {{ item.kind }} <br>
+                        <strong>Description:</strong> {{ item.description }} <br>
+                        <strong>Description Identifier:</strong> {{ item.description_identifier }} <br>
+                        <form action="/">
+                            <input type="submit" value="{{ item.title }} is my company">
+                        </form>
+                        <hr>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

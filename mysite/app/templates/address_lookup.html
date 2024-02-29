@@ -9,6 +9,7 @@
         <form action="{% url 'company_lookup' %}" method="post">
             {% csrf_token %}
             <input type="hidden" name="address_id" value="{{ suggestion.address_id }}">
+            <input type="hidden" name="postcode" value="{{ postcode }}">
             <button type="submit" name="selected_address" value="{{ suggestion.suggestion }}">{{ suggestion.suggestion }}</button>
         </form>
     {% endfor %}
