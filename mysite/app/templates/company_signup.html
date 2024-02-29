@@ -11,3 +11,10 @@ How it works:
 <br>
 <br>
 Let's get started!
+
+First, tell us your postcode:
+
+<form action="{% url 'address_lookup' %}?postcode=test">
+    <input type="text" name="postcode" id="postcode">
+    <input type="submit">
+</form>

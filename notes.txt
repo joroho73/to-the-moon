@@ -1,5 +1,12 @@
 1. 'manage.py' is in the mysite directory not the app directory as noted in readme.
 
-2. Required to run python manage.py migrate to apply unapplied migrations.
+2. Required to run 'python manage.py migrate' to apply unapplied migrations.
 
-3. 
+3. After running 'python manage.py runserver' received the following 404:
+
+    Using the URLconf defined in app.urls, Django tried these URL patterns, in this order:
+
+    admin/
+    company/ [name='company']
+    The empty path didn’t match any of these.
+

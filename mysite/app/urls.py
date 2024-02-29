@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from .views import company
+from .views import company, address_lookup
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("company/", company, name="company"),
+    path('address-lookup/', address_lookup, name='address_lookup'),
 ]
