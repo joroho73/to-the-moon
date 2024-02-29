@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import CompanySignupView, AddressLookupView  # Update the import statement
+from .views import CompanySignupView, AddressLookupView, CompanyLookupView
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("company/", CompanySignupView.as_view(), name="company"),
-    path('address-lookup/', AddressLookupView.as_view(), name='address_lookup'),  # Update the view reference
+    path('address-lookup/', AddressLookupView.as_view(), name='address_lookup'),
+    path('company-lookup/', CompanyLookupView.as_view(), name='company_lookup'),
 
 
 ]
